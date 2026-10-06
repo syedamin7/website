@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Emergency Medical Service</title>
+
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Emergency Medical Service</h1>
+        <p>Hospital, Pharmacy and Blood Information</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('hospital')">
+            Hospitals
+        </button>
+
+        <button onclick="showSection('pharmacy')">
+            Pharmacies
+        </button>
+
+        <button onclick="showSection('blood')">
+            Blood Database
+        </button>
+    </nav>
+
+    <main>
+
+        <!-- Hospital -->
+        <section id="hospital">
+            <h2>🏥 Hospital Search</h2>
+
+            <input
+                type="text"
+                id="hospitalSearch"
+                placeholder="Enter hospital name">
+
+            <button onclick="searchHospital()">
+                Search
+            </button>
+
+            <div id="hospitalResult"></div>
+        </section>
+
+
+        <!-- Pharmacy -->
+        <section id="pharmacy" style="display:none;">
+            <h2>💊 Pharmacy</h2>
+
+            <button onclick="loadPharmacies()">
+                Show Pharmacies
+            </button>
+
+            <div id="pharmacyResult"></div>
+        </section>
+
+
+        <!-- Blood -->
+        <section id="blood" style="display:none;">
+            <h2>🩸 Blood Database</h2>
+
+            <select id="bloodGroup">
+                <option value="">Select Blood Group</option>
+                <option value="A+">A+</option>
+                <option value="A-">A-</option>
+                <option value="B+">B+</option>
+                <option value="B-">B-</option>
+                <option value="AB+">AB+</option>
+                <option value="AB-">AB-</option>
+                <option value="O+">O+</option>
+                <option value="O-">O-</option>
+            </select>
+
+            <button onclick="searchBlood()">
+                Search
+            </button>
+
+            <div id="bloodResult"></div>
+        </section>
+
+    </main>
+
+    <script src="/static/script.js"></script>
+
+</body>
+</html>
